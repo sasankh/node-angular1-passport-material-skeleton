@@ -47,6 +47,10 @@ app.use(log4js.connectLogger(log4js.getLogger("http"), { level: 'auto' }));
 // routes
 require('./server/routes/index')(app);
 
+//initialize
+//require(__base + '/server/init/mongo'); //mongo using mongoose
+//require(__base + '/server/init/rabbit'); rabbitmq using ampq-coffee
+
 logger = require(__base + '/server/init/logger').main;
 
 // start listening
