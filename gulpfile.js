@@ -22,7 +22,7 @@ var path = {
 
   SERVER: ['server.js', 'gulpfile.js', serverDir + '/**/*.js', serverDir + '/**/**/*.js', serverDir + '/**/**/**/*.js'],
 
-  TEST: [testDir + '/mocha/**/**/*.js']
+  TEST: [testDir + '/mocha/*.js', testDir + '/mocha/**/*.js',testDir + '/mocha/**/**/*.js']
 };
 
 // linting server files
