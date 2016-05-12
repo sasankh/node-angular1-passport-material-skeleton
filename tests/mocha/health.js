@@ -18,8 +18,7 @@ describe('health', function() {
 
   beforeEach(function(done) {
 
-    sendBody = {
-    };
+    sendBody = {};
 
     done();
   });
@@ -33,13 +32,14 @@ describe('health', function() {
   it('--> response 200 for health OK', function(done) {
 
     supertest(app)
-    .post(endpoint)
+    .get(endpoint)
     .send(sendBody)
     .end(function(err, res) {
       if(err) {
         throw err;
       }
       res.status.should.be.equal(200);
+
       done();
     });
   });
@@ -47,7 +47,7 @@ describe('health', function() {
   it('--> response is an instanceOf(object)', function(done) {
 
     supertest(app)
-    .post(endpoint)
+    .get(endpoint)
     .send(sendBody)
     .end(function(err, res) {
       if(err) {
@@ -60,7 +60,7 @@ describe('health', function() {
 
   it('--> response content-type is "application/json; charset=utf-8" should be JSON object', function(done) {
     supertest(app)
-    .post(endpoint)
+    .get(endpoint)
     .send(sendBody)
     .end(function(err, res) {
       if(err) {
@@ -73,7 +73,7 @@ describe('health', function() {
 
   it('--> response body object should not be empty', function(done) {
     supertest(app)
-    .post(endpoint)
+    .get(endpoint)
     .send(sendBody)
     .end(function(err, response) {
       if(err)
@@ -87,7 +87,7 @@ describe('health', function() {
 
   it('--> response body for health OK should have "health" attribute in response json', function(done) {
     supertest(app)
-    .post(endpoint)
+    .get(endpoint)
     .send(sendBody)
     .end(function(err, response) {
       if(err)
