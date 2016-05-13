@@ -86,7 +86,7 @@ gulp.task('nodemon', function() {
 gulp.task('dev-env', function() {
   env({
     vars: {
-      APPLICATION : 'node-angular1-passport-material',
+      APPLICATION : 'node-angular1-materializecss-skeleton',
       PORT : 3000,
       CRYPTOKEY : '2e7659274f7a3d526f226e243a272a524f283d325e7333793d477d3c64',
       ENVIRONMENT : 'development',
@@ -94,7 +94,13 @@ gulp.task('dev-env', function() {
 			MYSQL_USER : '---',
 			MYSQL_PASS : '---',
 			MYSQL_DB : '---',
-			MYSQL_PORT : '---'
+			MYSQL_PORT : '---',
+      MONGO_URI : '---',
+      MONGO_DB : '---',
+      RABBIT_HOST : '---',
+      RABBIT_PORT : '---',
+      RABBIT_USERNAME :'---',
+      RABBIT_PASSWORD : '---'
     }
   });
 });
@@ -103,7 +109,7 @@ gulp.task('dev-env', function() {
 gulp.task('test-env', function() {
   env({
     vars: {
-      APPLICATION : 'node-angular1-passport-material',
+      APPLICATION : 'node-angular1-materializecss-skeleton',
       PORT : 3000,
       CRYPTOKEY : '2e7659274f7a3d526f226e243a272a524f283d325e7333793d477d3c64',
       ENVIRONMENT : 'test',
@@ -111,7 +117,13 @@ gulp.task('test-env', function() {
 			MYSQL_USER : '---',
 			MYSQL_PASS : '---',
 			MYSQL_DB : '---',
-			MYSQL_PORT : '---'
+			MYSQL_PORT : '---',
+      MONGO_URI : '---',
+      MONGO_DB : '---',
+      RABBIT_HOST : '---',
+      RABBIT_PORT : '---',
+      RABBIT_USERNAME :'---',
+      RABBIT_PASSWORD : '---'
     }
   });
 });

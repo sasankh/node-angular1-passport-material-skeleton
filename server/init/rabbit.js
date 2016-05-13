@@ -17,10 +17,10 @@ function initializeRabbitMQ(){
   logger.info("[INITIALIZATION] --> rabbit.js --> initializeRabbitMQ --> Initializing rabbitmq");
 
   connection = new AMQP({
-    host: config.rabbithost,
-    port: config.rabbitport,
-    login: config.rabbitusername,
-    password: config.rabbitpassword
+    host: config.rabbit.host,
+    port: config.rabbit.port,
+    login: config.rabbit.username,
+    password: config.rabbit.password
   },function(err){
     if(err){
       logger.error("[INITIALIZATION-Error] --> rabbit.js -->  initializeRabbitMQ --> Could not initilizing rabbitmq. Detail : " + err);
