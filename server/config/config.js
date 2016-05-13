@@ -26,8 +26,8 @@ exports.mongo = {
 };
 
 exports.rabbit = {
-  host = process.env.RABBIT_HOST || 'placeholder-for-rabbit-host';
-  port = process.env.RABBIT_PORT || 'placeholder-for-rabbit-port';
-  username = process.env.RABBIT_USERNAME || 'placeholder-for-rabbit-username';
-  password = process.env.RABBIT_PASSWORD || 'placeholder-for-rabbit-password';
-}
+  host : process.env.RABBIT_HOST || 'placeholder-for-rabbit-host',
+  port : process.env.RABBIT_PORT || 'placeholder-for-rabbit-port',
+  username : process.env.RABBIT_USERNAME || 'placeholder-for-rabbit-username',
+  password : process.env.RABBIT_PASSWORD || 'placeholder-for-rabbit-password'
+};
